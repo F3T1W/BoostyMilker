@@ -1,0 +1,8 @@
+Package: boosty-milker
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: F3T1W <f3t1w@icloud.com>
+Description: Command line tool to download photos from Boosty.to
+ Supports async downloads and authentication.
