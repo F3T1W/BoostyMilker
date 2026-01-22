@@ -20,19 +20,19 @@ jobs:
         include:
           - os: ubuntu-latest
             TARGET: linux
-            CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker src/main.py
+            CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker boosty_milker/main.py
             OUT_PATH: dist/boosty-milker
             ASSET_NAME: boosty-milker-linux
           
           - os: macos-latest
             TARGET: macos
-            CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker src/main.py
+            CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker boosty_milker/main.py
             OUT_PATH: dist/boosty-milker
             ASSET_NAME: boosty-milker-macos
           
           - os: windows-latest
             TARGET: windows
-            CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker src/main.py
+            CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker boosty_milker/main.py
             OUT_PATH: dist/boosty-milker.exe
             ASSET_NAME: boosty-milker-windows.exe
 
