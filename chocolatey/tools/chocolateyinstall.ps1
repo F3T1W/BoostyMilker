@@ -1,4 +1,4 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$exePath    = Join-Path $toolsDir 'boosty-dl.exe'
+$exePath    = Join-Path $toolsDir 'boosty-milker.exe'
 
-Install-BinFile -Name 'boosty-dl' -Path $exePath
+Install-BinFile -Name 'boosty-milker' -Path $exePath
