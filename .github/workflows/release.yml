@@ -33,7 +33,7 @@ jobs:
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: pyinstaller --onefile --clean --name boosty-milker src/main.py
-            OUT_PATH: dist\boosty-milker.exe
+            OUT_PATH: dist/boosty-milker.exe
             ASSET_NAME: boosty-milker-windows.exe
 
     steps:
