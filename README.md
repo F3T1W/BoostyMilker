@@ -10,7 +10,7 @@
 
 🚀 **Features:**
 *   📥 Download all photos from all posts of a creator.
-*   🔓 Support for premium/subscriber-only content (via auth token).
+*   ~~🔓 Support for premium/subscriber-only content (via auth token).~~
 *   ⚡ Async downloads (fast and efficient).
 *   🖥️ Works on **Windows, macOS, and Linux**.
 *   💾 Smart download (skips already existing files).
@@ -35,12 +35,6 @@ sudo apt-get install boosty-milker
 ```
 *Alternatively, download the `.deb` file manually from [Releases](https://github.com/F3T1W/BoostyMilker/releases).*
 
-### 🪟 Windows (Chocolatey)
-Install via PowerShell:
-```powershell
-choco install boosty-milker
-```
-
 ### 🐍 Python (PIP)
 Universal method for any OS (requires Python 3.10+):
 ```bash
@@ -61,7 +55,7 @@ boosty-milker --username "artist_name" --directory "./downloads"
 * `artist_name` — creator's username from the URL (e.g., for `boosty.to/cool_art` the username is `cool_art`).
 * `directory` — folder to save photos.
 
-### 2. Download Premium Content (Subscribers)
+### 2. ~~Download Premium Content (Subscribers)~~ Not implemeted yet 
 If you are subscribed to a creator, you need to provide your auth token to download private posts.
 
 1.  Open [Boosty.to](https://boosty.to) in your browser.
