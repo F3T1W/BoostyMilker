@@ -58,7 +58,7 @@ def git_commit_and_tag(version):
     print("Committing and tagging...")
     run_cmd(f'git add .', cwd=PROJECT_ROOT)
     run_cmd(f'git commit -m "Bump version to {version}"', cwd=PROJECT_ROOT)
-    run_cmd(f'git push origin main', cwd=PROJECT_ROOT)
+    run_cmd(f'git push origin master', cwd=PROJECT_ROOT)
     run_cmd(f'git tag v{version}', cwd=PROJECT_ROOT)
     run_cmd(f'git push origin v{version}', cwd=PROJECT_ROOT)
 
@@ -106,7 +106,7 @@ def update_brew_formula(version):
         shutil.copy(BREW_FORMULA, os.path.join(tap_dir, "boosty-milker.rb"))
         run_cmd('git add boosty-milker.rb', cwd=tap_dir)
         run_cmd(f'git commit -m "Update to {version}"', cwd=tap_dir)
-        run_cmd('git push origin main', cwd=tap_dir)
+        run_cmd('git push origin master', cwd=tap_dir)
         print("Homebrew tap updated!")
     else:
         print("Warning: homebrew-tap directory not found nearby. Skipping tap push.")
