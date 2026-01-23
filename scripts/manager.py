@@ -57,10 +57,22 @@ def update_version_in_files(new_version):
 def git_commit_and_tag(version):
     print("Committing and tagging...")
     run_cmd(f'git add .', cwd=PROJECT_ROOT)
-    run_cmd(f'git commit -m "Bump version to {version}"', cwd=PROJECT_ROOT)
-    run_cmd(f'git push origin main', cwd=PROJECT_ROOT)
-    run_cmd(f'git tag v{version}', cwd=PROJECT_ROOT)
-    run_cmd(f'git push origin v{version}', cwd=PROJECT_ROOT)
+    
+    # Check if there are changes to commit
+    status = subprocess.run('git status --porcelain', shell=True, cwd=PROJECT_ROOT, text=True, capture_output=True).stdout.strip()
+    if status:
+        run_cmd(f'git commit -m "Bump version to {version}"', cwd=PROJECT_ROOT)
+        run_cmd(f'git push origin main', cwd=PROJECT_ROOT)
+    else:
+        print("No changes to commit, skipping commit step...")
+        
+    # Check if tag exists
+    tags = subprocess.run(f'git tag -l v{version}', shell=True, cwd=PROJECT_ROOT, text=True, capture_output=True).stdout.strip()
+    if not tags:
+        run_cmd(f'git tag v{version}', cwd=PROJECT_ROOT)
+        run_cmd(f'git push origin v{version}', cwd=PROJECT_ROOT)
+    else:
+        print(f"Tag v{version} already exists, skipping tag creation...")
 
 def wait_for_assets(version):
     print("Waiting for GitHub Actions to build assets (this may take 2-5 minutes)...")
