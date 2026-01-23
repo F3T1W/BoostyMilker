@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boosty-milker</id>
-    <version>1.0.0</version>
+    <version>1.0.3</version>
     <title>Boosty Milker</title>
     <authors>F3T1W</authors>
     <description>Download photos from Boosty.to via CLI.</description>

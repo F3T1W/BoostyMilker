@@ -128,7 +128,7 @@ async def process_post(post: Dict[str, Any], downloader: Downloader, session: ai
     # Boosty structure varies; sometimes 'teaser' contains images if locked but we have access? 
     # Usually 'data' contains the content we can see.
 
-async def main():
+async def async_main():
     parser = argparse.ArgumentParser(description="Boosty Milker - Photo Downloader")
     parser.add_argument("--username", required=True, help="Boosty creator username")
     parser.add_argument("--directory", required=True, help="Directory to save photos")
@@ -219,7 +219,10 @@ def process_post_sync(post, tasks, downloader, session):
                 filename = f"{date_str}_{post_id}_img{img_count}{ext}"
                 tasks.append(downloader.download_file(session, url, filename))
 
-if __name__ == "__main__":
+def main():
     if sys.platform == 'win32':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main())
+    asyncio.run(async_main())
+
+if __name__ == "__main__":
+    main()

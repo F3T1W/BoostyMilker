@@ -1,14 +1,14 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "boosty-milker"
-version = "1.0.1"
+version = "1.0.3"
 description = "CLI tool to download photos from Boosty.to"
 authors = [{ name = "F3T1W", email = "f3t1w@icloud.com" }]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 dependencies = [
     "aiohttp>=3.8.0",
     "tqdm>=4.65.0",
@@ -17,3 +17,6 @@ dependencies = [
 
 [project.scripts]
 boosty-milker = "boosty_milker.main:main"
+
+[tool.setuptools]
+packages = ["boosty_milker"]
