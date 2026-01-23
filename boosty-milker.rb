@@ -4,7 +4,7 @@ class BoostyMilker < Formula
   desc "CLI tool to download photos from Boosty"
   homepage "https://github.com/F3T1W/BoostyMilker"
   url "https://github.com/F3T1W/BoostyMilker/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "2ea00627a3add0712effa3c12a1f225708ac1435f186e95f28020c7fe04a3203"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   license "MIT"
 
   depends_on "python@3.11"
