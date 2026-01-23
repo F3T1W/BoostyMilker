@@ -58,7 +58,7 @@ def git_commit_and_tag(version):
     print("Committing and tagging...")
     run_cmd(f'git add .', cwd=PROJECT_ROOT)
     run_cmd(f'git commit -m "Bump version to {version}"', cwd=PROJECT_ROOT)
-    run_cmd(f'git push origin master', cwd=PROJECT_ROOT)
+    run_cmd(f'git push origin main', cwd=PROJECT_ROOT)
     run_cmd(f'git tag v{version}', cwd=PROJECT_ROOT)
     run_cmd(f'git push origin v{version}', cwd=PROJECT_ROOT)
 
