@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "boosty-milker"
-version = "1.0.3"
+version = "1.0.4"
 description = "CLI tool to download photos from Boosty.to"
 authors = [{ name = "F3T1W", email = "f3t1w@icloud.com" }]
 readme = "README.md"
